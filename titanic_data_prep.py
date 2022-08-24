@@ -28,41 +28,36 @@ def outlier_thresholds(dataframe, col_name, q1=0.25, q3=0.75):
 
 # to determine categorical, numeric, categorical but cardinal variables
 def grab_col_names(dataframe, cat_th=10, car_th=20):
+    
     """
-
-    Veri setindeki kategorik, numerik ve kategorik fakat kardinal değişkenlerin isimlerini verir.
-    Not: Kategorik değişkenlerin içerisine numerik görünümlü kategorik değişkenler de dahildir.
-
+    It gives the names of categorical, numerical and categorical but cardinal variables in the data set.
+    Note: Categorical variables with numerical appearance are also included in categorical variables.
     Parameters
     ------
         dataframe: dataframe
-                Değişken isimleri alınmak istenilen dataframe
+                The dataframe from which variable names are to be retrieved
         cat_th: int, optional
-                numerik fakat kategorik olan değişkenler için sınıf eşik değeri
-        car_th: int, optional
-                kategorik fakat kardinal değişkenler için sınıf eşik değeri
-
+                Class threshold for numeric but categorical variables
+        car_th: int, optinal
+                Class threshold for categorical but cardinal variables
     Returns
     ------
         cat_cols: list
-                Kategorik değişken listesi
+                Categorical variable list
         num_cols: list
-                Numerik değişken listesi
+                Numeric variable list
         cat_but_car: list
-                Kategorik görünümlü kardinal değişken listesi
-
+                Categorical view cardinal variable list
     Examples
     ------
         import seaborn as sns
         df = sns.load_dataset("iris")
         print(grab_col_names(df))
-
-
     Notes
     ------
-        cat_cols + num_cols + cat_but_car = toplam değişken sayısı
-        num_but_cat cat_cols'un içerisinde.
-
+        cat_cols + num_cols + cat_but_car = total number of variables
+        num_but_cat is inside cat_cols.
+        The sum of 3 lists with return is equal to the total number of variables: cat_cols + num_cols + cat_but_car = number of variables
     """
 
     # cat_cols, cat_but_car
