@@ -1,16 +1,3 @@
-#############################################
-# FEATURE ENGINEERING & DATA PRE-PROCESSING
-#############################################
-
-# 1. Outliers
-# 2. Missing Values
-# 3. Encoding (Label Encoding, One-Hot Encoding, Rare Encoding)
-# 4. Feature Scaling
-# 5. Feature Extraction
-# 6. Feature Interactions
-# 7. End-to-End Application
-
-
 ######### Libraries and Some Settings #########
 
 import numpy as np
