@@ -402,7 +402,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 rf_model = RandomForestClassifier(random_state=46).fit(X_train, y_train)
 y_pred = rf_model.predict(X_test)
-accuracy_score(y_pred, y_test) ## THE ACCURACY = 0.81 %
+accuracy_score(y_pred, y_test) ## THE ACCURACY = % 81
 
 ############# COMMENT ##############
 # Their survivability is predicted with 81% accuracy by using the characteristics of those who have boarded this ship,
